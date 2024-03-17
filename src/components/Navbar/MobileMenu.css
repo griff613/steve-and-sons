@@ -1,0 +1,42 @@
+/* MobileMenu.css */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #68c7c5; /* Match your color scheme */
+  width: 80%; /* Adjust width as needed */
+  max-width: 300px; /* Set maximum width */
+  padding: 20px;
+  transition: transform 0.3s ease-in-out; /* Apply transition effect */
+  transform: translateX(100%); /* Initially hide menu off-screen */
+}
+
+.mobile-menu.open {
+  transform: translateX(0); /* Slide in menu when open */
+}
+
+.mobile-menu-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu-links li {
+  margin-bottom: 15px; /* Adjust spacing between links */
+}
+
+.mobile-menu-links li a {
+  color: #fefdf1; /* Match your color scheme */
+  text-decoration: none;
+  font-size: 1.2rem; /* Adjust font size */
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fefdf1; /* Match your color scheme */
+  font-size: 1.5rem;
+  cursor: pointer;
+}

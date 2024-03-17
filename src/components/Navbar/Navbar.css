@@ -1,0 +1,102 @@
+/* Navbar.css */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it's above other content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* light blue background-color: #68c7c5;  Match your color scheme */
+  background-color: #4a5960;
+  padding: 10px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Adjust spacing */
+}
+
+.title {
+  color: #fefdf1; /* Match your color scheme */
+  font-size: 1.2rem; /* Adjust font size */
+  margin-right: 20px; /* Adjust spacing between logo/title and nav links */
+}
+
+.navbar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Ensure nav links are horizontally aligned */
+}
+
+.navbar-links li {
+  margin-right: 20px; /* Adjust spacing between links */
+}
+
+.phone-btn {
+  background-color: #4a5960; /* Match your color scheme */
+  color: #fefdf1; /* Match your color scheme */
+  padding: 10px 20px; /* Adjust padding */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: none; /* Initially hide phone button */
+}
+
+.hamburger-btn {
+  background-color: transparent;
+  color: #fefdf1; /* Match your color scheme */
+  border: none;
+  font-size: 1.5rem; /* Adjust font size */
+  cursor: pointer;
+  display: none; /* Initially hide hamburger button */
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .navbar-left {
+    justify-content: center; /* Center items */
+  }
+
+  .phone-btn {
+    display: block; /* Show phone button */
+    margin: 0 auto; /* Center the phone button */
+  }
+
+  .hamburger-btn {
+    display: block; /* Show hamburger button */
+    margin-left: auto; /* Align hamburger button to the right */
+  }
+
+  .title,
+  .navbar-links {
+    display: none; /* Hide title and nav links */
+  }
+}
+
+/* Medium and Large screens */
+@media (min-width: 769px) {
+  .title,
+  .navbar-links {
+    display: flex; /* Ensure title and nav links are horizontally aligned */
+  }
+
+  .phone-btn {
+    display: none; /* Hide phone button */
+  }
+
+  .hamburger-btn {
+    display: none; /* Hide hamburger button */
+  }
+}
