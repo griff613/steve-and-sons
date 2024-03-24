@@ -16,15 +16,24 @@
   align-items: center;
 }
 
+
 .navbar-right {
   display: flex;
   align-items: center;
 }
 
+
+.navbar-center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+
 .logo {
   width: 50px; /* Adjust as needed */
   height: auto; /* Maintain aspect ratio */
-  margin-right: 10px; /* Adjust spacing */
 }
 
 .title {
@@ -45,13 +54,13 @@
 }
 
 .phone-btn {
+  display: right;
   background-color: #4a5960; /* Match your color scheme */
   color: #fefdf1; /* Match your color scheme */
   padding: 10px 20px; /* Adjust padding */
   border: none;
   border-radius: 5px;
   text-decoration: none;
-  display: none; /* Initially hide phone button */
 }
 
 .hamburger-btn {
@@ -60,43 +69,51 @@
   border: none;
   font-size: 1.5rem; /* Adjust font size */
   cursor: pointer;
-  display: none; /* Initially hide hamburger button */
 }
 
 /* Small screens */
 @media (max-width: 768px) {
+  .title {
+    display: None;
+  }
+  .logo {
+    display: flex;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
   .navbar-left {
-    justify-content: center; /* Center items */
+    display: flex;
   }
-
-  .phone-btn {
-    display: block; /* Show phone button */
-    margin: 0 auto; /* Center the phone button */
+  .navbar-right {
+    display: flex
   }
-
-  .hamburger-btn {
-    display: block; /* Show hamburger button */
-    margin-left: auto; /* Align hamburger button to the right */
-  }
-
-  .title,
   .navbar-links {
     display: none; /* Hide title and nav links */
+  }
+  .phone-btn {
+    display: flex; /* Show phone button */
+    margin: 0 auto; /* Center the phone button */
   }
 }
 
 /* Medium and Large screens */
 @media (min-width: 769px) {
-  .title,
+  .logo {
+    display: center;
+  }
+  .title {
+    display: flex;
+  }
+  .navbar-right,
   .navbar-links {
-    display: flex; /* Ensure title and nav links are horizontally aligned */
+    display: navbar-center; /* Ensure title and nav links are horizontally aligned */
   }
-
   .phone-btn {
-    display: none; /* Hide phone button */
+    display: flex;
+    margin: 0 auto; /* Center the phone button */
   }
-
-  .hamburger-btn {
-    display: none; /* Hide hamburger button */
+  .navbar-center {
+    display: none;
   }
 }

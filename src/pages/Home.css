@@ -1,6 +1,7 @@
+/* This styles things inside the home page.*/
 /* Home.css */
 .home-page {
-  padding-top: 80px; /* Adjust according to navbar height */
+  padding-top: 20px; /* Adjust according to navbar height */
 }
 
 .hero {
@@ -32,26 +33,13 @@
 
 /* Home.css */
 .card-section {
-  display: flex;
+  max-width: 20%;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px; /* Adjust spacing */
 }
 
-.card {
-  width: calc(100% - 40px); /* Adjust card width */
-  max-width: 400px; /* Set maximum card width */
-  margin: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.card-image {
-  width: 100%;
-  height: auto;
-}
-
-.card-description {
-  padding: 20px;
+.card-list {
+  list-style-type: none;
+  display: flex;
 }

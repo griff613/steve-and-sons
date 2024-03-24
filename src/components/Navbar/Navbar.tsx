@@ -26,11 +26,14 @@ const NavBar: React.FC = () => {
           {/* Add more nav links as needed */}
         </ul>
       </div>
+      {/*So, navbar center is just a region, hamburger-menu should gp*/}
+      <div className="navbar-center">
+        <button className="hamburger-btn" onClick={toggleMenu}>☰</button>
+        <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+      </div> 
       <div className="navbar-right">
         <a href="tel:1234567890" className="phone-btn">Call Us</a>
-        <button className="hamburger-btn" onClick={toggleMenu}>☰</button>
       </div>
-      <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </nav>
   );
 };
