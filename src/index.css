@@ -1,13 +1,14 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+img {
+    overflow-clip-margin: content-box; /* default value */
+    overflow: hidden; /* default for img elements */
+    /* overflow-x and overflow-y are not typically needed for img elements */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.body {
+  width: auto;
+  height: auto;
+  margin: 0;
 }
+
+

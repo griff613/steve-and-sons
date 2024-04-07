@@ -1,17 +1,40 @@
-
 .card {
-  max-width: 100px; /* Set maximum card width */
-  margin: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically on small screens */
+  width: 100%; /* Card takes the full width of its parent container */
+  overflow: hidden; /* Ensures that any overflowing parts of the image are hidden */
+}
+
+.card-image-container {
+  display: block;
+  width: 300px; /* Container takes 50% of the card's width */
+  height: 300px; /* Container height is 20% of the viewport height */
+  overflow: hidden; /* Prevents the image from exceeding the container's dimensions */
+  display: flex;
+}
+
+.card-image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .card-image {
-  width: 40vw;
-  height: auto;
+  width: 100%; /* Image fills the width of its container */
+  height: 100%; /* Image fills the height of its container */
+  object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
+  object-position: center; /* Centers the image within the element's box */
 }
 
 .card-description {
-  padding: 20px;
+  width: 50%; /* Matches the image container width */
+  height: 20vh; /* Matches the image container height */
+  padding: 15px;
+}
+
+/* For larger screens, place image and description side by side */
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row; /* Side-by-side layout on larger screens */
+  }
 }

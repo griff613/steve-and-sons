@@ -1,16 +1,21 @@
-// Card.tsx
 import React from 'react';
 
 interface CardProps {
-  imageUrl: string;
+  image: string;
+  title: string;
   description: string;
 }
 
-const Card: React.FC<CardProps> = ({ imageUrl, description }) => {
+const Card: React.FC<CardProps> = ({ image, title, description }) => {
   return (
     <div className="card">
-      <img src={imageUrl} alt="Card" className="card-image" />
-      <div className="card-description">{description}</div>
+        <div className = "card-image-container">
+          <img src={image} alt={title} className="card-image" />
+        </div>
+        <div className="card-description">
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
     </div>
   );
 };
