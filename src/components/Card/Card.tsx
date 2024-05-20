@@ -1,16 +1,26 @@
-// Card.tsx
 import React from 'react';
+import './Card.css'
 
 interface CardProps {
-  imageUrl: string;
+  image: string;
+  overlay_text: string;
+  title: string;
   description: string;
 }
 
-const Card: React.FC<CardProps> = ({ imageUrl, description }) => {
+const Card: React.FC<CardProps> = ({ image, overlay_text, title, description }) => {
   return (
     <div className="card">
-      <img src={imageUrl} alt="Card" className="card-image" />
-      <div className="card-description">{description}</div>
+        <div className = "card-image-container">
+          <img src={image} alt={title} className="card-image" />
+          <div className="card-overlay">
+            <div className="overlay-text">{overlay_text}</div>
+          </div>
+        </div>
+        <div className="card-description">
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
     </div>
   );
 };

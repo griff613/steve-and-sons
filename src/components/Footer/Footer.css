@@ -2,9 +2,9 @@
 .footer {
   background-color: #68c7c5; /* Match your navbar color */
   color: #fefdf1; /* Match your text color */
-  padding: 20px; /* Adjust padding as needed */
   text-align: center; /* Center text horizontally */
   position: fixed; /* Make the footer sticky */
   bottom: 0; /* Stick to the bottom */
   width: 100%; /* Occupy full width */
+  height: 50px;
 }

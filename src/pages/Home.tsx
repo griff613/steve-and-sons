@@ -4,54 +4,48 @@ import Hero from '../components/Hero/Hero';
 import Card from '../components/Card/Card';
 import './Home.css';
 
-const black_guy: string = "/images/black_fella.jpeg";
-const sparky: string = "/images/sparky.jpeg";
 
+const HomePage = () => {
+  // Sample data for cards, you can replace this with actual data
+  const cardsData = [
+    {
+      id: 1,
+      image: 'images/card1.webp',
+      overlay_text: 'Services',
+      title: 'Card Title 1',
+      description: 'Lorem aoseut aoeusi ipsum dolor lorem.Lorem aoseut aoeusi ipsum dolor lorem.Lorem aoseut aoeusi ipsum dolor lorem.Lorem aoseut aoeusi ipsum dol'
+    },
+    {
+      id: 2,
+      image: 'images/card1.webp',
+      overlay_text: '',
+      title: 'Card Title 2',
+      description: 'Description for card 2...'
+    },
+    // Add more cards as needed...
+  ];
 
-const Home: React.FC = () => {
   return (
-    <div className="home-page">
-      <Hero
-        imageUrl={sparky}
-        title="Welcome to Our Website"
-        subtitle="Explore our services and products"
-      />
-      <div>
-        <ul className = "card-list">
-          <li className = "card">
-            <Card
-              imageUrl="/images/Bubbles-1.jpeg"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            />
-          </li>
-          <li>
-            <Card
-              imageUrl={black_guy}
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            />
-          </li>
-          <li>
-            <Card
-              imageUrl={black_guy}
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            />
-          </li>
-          <li>
-            <Card
-              imageUrl={black_guy}
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            />
-          </li>
-          <li>
-            <Card
-              imageUrl={black_guy}
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            />
-          </li>
-        </ul>
+    <div className = "main-content">
+      <section className="hero-section">
+        <h1>Steve and Sons electric
+            <p>Your journey starts here.</p>
+
+        </h1>
+      </section>
+      <div className="cards-container">
+        {cardsData.map(card => (
+          <Card
+            key={card.id}
+            image={card.image}
+            overlay_text={card.overlay_text}
+            title={card.title}
+            description={card.description}
+          />
+        ))}
       </div>
     </div>
   );
 };
 
-export default Home;
+export default HomePage;
