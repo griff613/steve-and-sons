@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({ image, overlay_text, title, description }) 
             <div className="overlay-text">{overlay_text}</div>
           </div>
         </div>
-        <div className="card-description">
+        <div className="card-content">
           <h3>{title}</h3>
           <p>{description}</p>
         </div>

@@ -27,12 +27,7 @@ const HomePage = () => {
 
   return (
     <div className = "main-content">
-      <section className="hero-section">
-        <h1>Steve and Sons electric
-            <p>Your journey starts here.</p>
-
-        </h1>
-      </section>
+     <Hero />
       <div className="cards-container">
         {cardsData.map(card => (
           <Card

@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import MobileMenu from './MobileMenu';
-import logo from '../../assets/logo.svg'; // Adjust the path as per your directory structure
 import './Navbar.css';
 
 const NavBar: React.FC = () => {
@@ -17,14 +16,8 @@ const NavBar: React.FC = () => {
       {/* Navbar content */}
       <div className="navbar-left">
         <Link to="/">
-          <img src={logo} alt="Logo" className="logo" /> {/* Use the logo image here */}
-          <span className="title">Your Title</span>
+          <img src='images/logo.png' alt="Logo" className="logo" /> {/* Use the logo image here */}
         </Link>
-        <ul className="navbar-links">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          {/* Add more nav links as needed */}
-        </ul>
       </div>
       {/*So, navbar center is just a region, hamburger-menu should gp*/}
       <div className="navbar-center">
