@@ -34,6 +34,7 @@
 .logo {
   width: 100px; /* Adjust as needed */
   height: auto; /* Maintain aspect ratio */
+  padding-left: 15px
 }
 
 .title {

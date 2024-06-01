@@ -35,7 +35,7 @@
 .card-content {
   bottom: 0;
   left: 0;
-  width: 70%;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
   padding: 15px;
   box-sizing: border-box;
@@ -78,8 +78,11 @@
     width: 40%;
   }
   .card-description {
-      width: 60%;
+      width: 100%;
       height: auto; /* Adjust height for larger screens */
+  }
+  .card-content {
+      width: 100%;
   }
 
 }
